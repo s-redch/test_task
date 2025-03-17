@@ -1,0 +1,24 @@
+[2025-03-17T19:17:40.261+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-03-17T19:17:40.321+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_dag.load_analytics_sessions manual__2025-03-17T19:17:29.131919+00:00 [queued]>
+[2025-03-17T19:17:40.352+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_dag.load_analytics_sessions manual__2025-03-17T19:17:29.131919+00:00 [queued]>
+[2025-03-17T19:17:40.353+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-03-17T19:17:40.402+0000] {taskinstance.py:2889} INFO - Executing <Task(PostgresOperator): load_analytics_sessions> on 2025-03-17 19:17:29.131919+00:00
+[2025-03-17T19:17:40.422+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=2716) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-03-17T19:17:40.430+0000] {standard_task_runner.py:72} INFO - Started process 2717 to run task
+[2025-03-17T19:17:40.430+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'etl_dag', 'load_analytics_sessions', 'manual__2025-03-17T19:17:29.131919+00:00', '--job-id', '195', '--raw', '--subdir', 'DAGS_FOLDER/etl.py', '--cfg-path', '/tmp/tmp934635h6']
+[2025-03-17T19:17:40.432+0000] {standard_task_runner.py:105} INFO - Job 195: Subtask load_analytics_sessions
+[2025-03-17T19:17:40.570+0000] {task_command.py:467} INFO - Running <TaskInstance: etl_dag.load_analytics_sessions manual__2025-03-17T19:17:29.131919+00:00 [running]> on host c032966e105e
+[2025-03-17T19:17:40.870+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_dag' AIRFLOW_CTX_TASK_ID='load_analytics_sessions' AIRFLOW_CTX_EXECUTION_DATE='2025-03-17T19:17:29.131919+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-03-17T19:17:29.131919+00:00'
+[2025-03-17T19:17:40.871+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-03-17T19:17:40.914+0000] {sql.py:278} INFO - Executing: select load_analytics_sessions();
+[2025-03-17T19:17:40.982+0000] {base.py:84} INFO - Retrieving connection 'con_agg'
+[2025-03-17T19:17:41.033+0000] {base.py:84} INFO - Retrieving connection 'con_agg'
+[2025-03-17T19:17:41.052+0000] {sql.py:553} INFO - Running statement: select load_analytics_sessions();, parameters: None
+[2025-03-17T19:17:41.742+0000] {sql.py:562} INFO - Rows affected: 1
+[2025-03-17T19:17:41.821+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-03-17T19:17:41.822+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=etl_dag, task_id=load_analytics_sessions, run_id=manual__2025-03-17T19:17:29.131919+00:00, execution_date=20250317T191729, start_date=20250317T191740, end_date=20250317T191741
+[2025-03-17T19:17:41.882+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-03-17T19:17:41.932+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-03-17T19:17:41.940+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

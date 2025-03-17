@@ -1,0 +1,23 @@
+[2025-03-17T20:20:13.752+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-03-17T20:20:14.041+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_dag.load_tables.events_project_c_db scheduled__2025-03-17T20:10:00+00:00 [queued]>
+[2025-03-17T20:20:14.452+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_dag.load_tables.events_project_c_db scheduled__2025-03-17T20:10:00+00:00 [queued]>
+[2025-03-17T20:20:14.471+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-03-17T20:20:15.042+0000] {taskinstance.py:2889} INFO - Executing <Task(PostgresOperator): load_tables.events_project_c_db> on 2025-03-17 20:10:00+00:00
+[2025-03-17T20:20:15.273+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=3534) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-03-17T20:20:15.351+0000] {standard_task_runner.py:72} INFO - Started process 3553 to run task
+[2025-03-17T20:20:15.331+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'etl_dag', 'load_tables.events_project_c_db', 'scheduled__2025-03-17T20:10:00+00:00', '--job-id', '249', '--raw', '--subdir', 'DAGS_FOLDER/etl.py', '--cfg-path', '/tmp/tmpjcgqbrhv']
+[2025-03-17T20:20:15.372+0000] {standard_task_runner.py:105} INFO - Job 249: Subtask load_tables.events_project_c_db
+[2025-03-17T20:20:16.092+0000] {task_command.py:467} INFO - Running <TaskInstance: etl_dag.load_tables.events_project_c_db scheduled__2025-03-17T20:10:00+00:00 [running]> on host c032966e105e
+[2025-03-17T20:20:20.110+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_dag' AIRFLOW_CTX_TASK_ID='load_tables.events_project_c_db' AIRFLOW_CTX_EXECUTION_DATE='2025-03-17T20:10:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-03-17T20:10:00+00:00'
+[2025-03-17T20:20:20.180+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-03-17T20:20:20.800+0000] {sql.py:278} INFO - Executing: select load_tables('events_project_c_db', 'events');
+[2025-03-17T20:20:21.350+0000] {base.py:84} INFO - Retrieving connection 'con_agg'
+[2025-03-17T20:20:21.740+0000] {base.py:84} INFO - Retrieving connection 'con_agg'
+[2025-03-17T20:20:21.880+0000] {sql.py:553} INFO - Running statement: select load_tables('events_project_c_db', 'events');, parameters: None
+[2025-03-17T20:20:22.141+0000] {sql.py:562} INFO - Rows affected: 1
+[2025-03-17T20:20:23.221+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-03-17T20:20:23.231+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=etl_dag, task_id=load_tables.events_project_c_db, run_id=scheduled__2025-03-17T20:10:00+00:00, execution_date=20250317T201000, start_date=20250317T202014, end_date=20250317T202023
+[2025-03-17T20:20:24.300+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-03-17T20:20:24.531+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

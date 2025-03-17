@@ -1,0 +1,20 @@
+[2025-03-16T18:00:02.263+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-03-16T18:00:02.286+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: api_wether_dag.api scheduled__2025-03-16T17:00:00+00:00 [queued]>
+[2025-03-16T18:00:02.299+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: api_wether_dag.api scheduled__2025-03-16T17:00:00+00:00 [queued]>
+[2025-03-16T18:00:02.300+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-03-16T18:00:02.315+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): api> on 2025-03-16 17:00:00+00:00
+[2025-03-16T18:00:02.326+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=14663) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-03-16T18:00:02.328+0000] {standard_task_runner.py:72} INFO - Started process 14665 to run task
+[2025-03-16T18:00:02.328+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'api_wether_dag', 'api', 'scheduled__2025-03-16T17:00:00+00:00', '--job-id', '22', '--raw', '--subdir', 'DAGS_FOLDER/dag_wether.py', '--cfg-path', '/tmp/tmpgiuzat10']
+[2025-03-16T18:00:02.331+0000] {standard_task_runner.py:105} INFO - Job 22: Subtask api
+[2025-03-16T18:00:02.387+0000] {task_command.py:467} INFO - Running <TaskInstance: api_wether_dag.api scheduled__2025-03-16T17:00:00+00:00 [running]> on host 38be098511d8
+[2025-03-16T18:00:03.052+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='api_wether_dag' AIRFLOW_CTX_TASK_ID='api' AIRFLOW_CTX_EXECUTION_DATE='2025-03-16T17:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-03-16T17:00:00+00:00'
+[2025-03-16T18:00:03.053+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-03-16T18:00:03.381+0000] {python.py:240} INFO - Done. Returned value was: ok
+[2025-03-16T18:00:03.402+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-03-16T18:00:03.403+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=api_wether_dag, task_id=api, run_id=scheduled__2025-03-16T17:00:00+00:00, execution_date=20250316T170000, start_date=20250316T180002, end_date=20250316T180003
+[2025-03-16T18:00:03.435+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-03-16T18:00:03.453+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-03-16T18:00:03.456+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

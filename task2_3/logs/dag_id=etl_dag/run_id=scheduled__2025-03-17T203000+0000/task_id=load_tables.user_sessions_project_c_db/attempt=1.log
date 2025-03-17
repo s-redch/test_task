@@ -1,0 +1,17 @@
+[2025-03-17T20:40:33.201+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-03-17T20:40:34.851+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_dag.load_tables.user_sessions_project_c_db scheduled__2025-03-17T20:30:00+00:00 [queued]>
+[2025-03-17T20:40:35.900+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_dag.load_tables.user_sessions_project_c_db scheduled__2025-03-17T20:30:00+00:00 [queued]>
+[2025-03-17T20:40:36.130+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-03-17T20:40:38.610+0000] {taskinstance.py:2889} INFO - Executing <Task(PostgresOperator): load_tables.user_sessions_project_c_db> on 2025-03-17 20:30:00+00:00
+[2025-03-17T20:40:39.621+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=3813) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-03-17T20:40:39.840+0000] {standard_task_runner.py:72} INFO - Started process 3838 to run task
+[2025-03-17T20:40:39.761+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'etl_dag', 'load_tables.user_sessions_project_c_db', 'scheduled__2025-03-17T20:30:00+00:00', '--job-id', '274', '--raw', '--subdir', 'DAGS_FOLDER/etl.py', '--cfg-path', '/tmp/tmpt1ikcb9i']
+[2025-03-17T20:40:39.891+0000] {standard_task_runner.py:105} INFO - Job 274: Subtask load_tables.user_sessions_project_c_db
+[2025-03-17T20:40:42.341+0000] {task_command.py:467} INFO - Running <TaskInstance: etl_dag.load_tables.user_sessions_project_c_db scheduled__2025-03-17T20:30:00+00:00 [running]> on host c032966e105e
+[2025-03-17T20:40:48.120+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_dag' AIRFLOW_CTX_TASK_ID='load_tables.user_sessions_project_c_db' AIRFLOW_CTX_EXECUTION_DATE='2025-03-17T20:30:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-03-17T20:30:00+00:00'
+[2025-03-17T20:40:48.049+0000] {job.py:229} INFO - Heartbeat recovered after 21.10 seconds
+[2025-03-17T20:40:48.169+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-03-17T20:40:55.158+0000] {sql.py:278} INFO - Executing: select load_tables('user_sessions_project_c_db', 'user_sessions');
+[2025-03-17T20:40:58.479+0000] {base.py:84} INFO - Retrieving connection 'con_agg'
